@@ -1,0 +1,1981 @@
+
+<!-- saved from url=(0161)https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&views=y&toc=y&diagram=y&vselect=y -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+html * {
+	font-size:xx-small;
+	font-family: Tahoma;
+	text-align:left;
+	vertical-align:top;
+	word-wrap:break-word;
+	empty-cells:show;
+}
+.flex {
+	/* basic styling */
+	width: 100%;
+	height: 100%;
+	border: none;
+	flex-wrap: nowrap;
+	/* flexbox setup */
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+.toc {
+	-webkit-box-ordinal-group: 1;  /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: 1;     /* OLD - Firefox 19- */
+	-ms-flex-order: 1;             /* TWEENER - IE 10 */
+	-webkit-order: 1;              /* NEW - Chrome */
+	order: 1;                      /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex: auto; 
+	flex: auto;
+	min-width: 200px;
+	max-width: 200px;
+	padding-left: 5px;
+	padding-right: 5px;
+	overflow: auto;
+	word-wrap: break-word;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	font-family: Tahoma;
+	font-size:10pt;
+	height:100%;                   /* Safari */
+}
+.details {
+	-webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+	-ms-flex-order: 2;              /* TWEENER - IE 10 */
+	-webkit-order: 2;               /* NEW - Chrome */
+	order: 2;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-flex: auto; 
+	flex: auto;
+ margin-left: 5px;
+	overflow: auto;
+	overflow-y: scroll;            /* Safari */
+	word-wrap: break-word;
+	width:100%;
+}
+a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	font-weight: bold;
+}
+.t_item{
+  margin-left: 5px;
+}
+</style>
+<script>function $x(pNd){
+	var lThis;
+	switch(typeof (pNd)){
+		case 'string':lThis = document.getElementById(pNd);break;
+		case 'object':lThis = pNd;break;
+		default:return false;break;
+	}
+	return (lThis.nodeType == 1)?lThis:false;
+}
+var gRegex=false;
+var gHeight=0;
+function $d_Find(pThis,pString,pTags,pClass){
+       if(!pTags){pTags = 'DIV';}
+       pThis = $x(pThis);
+       if(pThis){
+           var d=pThis.getElementsByTagName(pTags);
+           pThis.style.display="none";
+           if(!gRegex){gRegex =new RegExp("test");}
+           gRegex.compile(pString,"i");
+           for(var i=0,len=d.length ;i<len;i++){
+               if(gRegex.test(d[i].innerHTML)){
+                   d[i].style.display="table-row";
+                   d[i].style.visiblilty="visible";
+                   d[i].style.height=gHeight;
+               } else{
+                   if ( gHeight==0)  gHeight=d[i].style.height;
+                   d[i].style.height='0';
+                   d[i].style.display="none";
+                   d[i].style.visiblilty="hidden";
+               }
+           }
+       pThis.style.display="block";
+   }
+   return;
+}
+</script>
+	</head>
+	<body>
+		<div class="flex">
+			<div class="toc" id="toc_list">
+				<table id="toc_table" width="100%" style="empty-cells:show; font-family:Tahoma; font-size:small; text-align:left; vertical-align:top; word-wrap:break-word;">
+					<tbody><tr><td style="font-style:italic; font-weight:bold;"><input type="text" style="width: 180px; margin-top: 5px;" onkeyup="$d_Find(&#39;toc_list&#39;,this.value,&#39;a&#39;)"></td></tr>
+					<tr><td>&nbsp;</td></tr>
+				</tbody></table>
+				<div class="t_item">
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#8FF96D42-92B3E5FC6871" target="_self">ADMIN.BANCO_IMAGENS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#426014AC-D7B47B6445F8" target="_self">ADMIN.CLASSIFICACOES</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#7E75EDF2-CD5B2E3B865E" target="_self">ADMIN.DADOS_CLIMATICOS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#2B75A596-C859345A5149" target="_self">ADMIN.DADOS_PLANTA_SOJA</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#A156A99B-DAC5AE628C2B" target="_self">ADMIN.FAVORABILIDADES_FAS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#78B68DE7-BF11CF9E32AB" target="_self">ADMIN.FUNGICIDAS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#4D5775FD-3D7451C4B435" target="_self">ADMIN.IMAGEM_CLIMA_FAVORAB</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#5F474C78-3472113D78D8" target="_self">ADMIN.IMAGENS_SEGMENTADAS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#01861397-54C0D0DF93AE" target="_self">ADMIN.PROJETOS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#42A0F32F-4039BCB233D9" target="_self">ADMIN.RECOMENDACOES</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#FBC5461E-E859317D335F" target="_self">ADMIN.RECOMENDACOES_FUNGICIDAS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#6448DB16-C6C25D391F34" target="_self">ADMIN.ROTULOS_SEGMENTADOS</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#3E24020A-AB025A6B7774" target="_self">ADMIN.SEGMENTACAO</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#B8D66909-0DE019C05EC0" target="_self">ADMIN.SEMENTES</a></div>
+					<div><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#70022807-F755786ED5EC" target="_self">ADMIN.TAB_VERD_FAVORABILIDADE</a></div>				</div>
+			</div>
+			<div class="details">
+
+<title></title><meta name="generator" content="Altova StyleVision Enterprise Edition 2014 (x64) (http://www.altova.com)"><meta http-equiv="X-UA-Compatible" content="IE=7"><link rel="stylesheet" type="text/css" href="./Relatorio_Banco_Relacional_files/osddm_main.css"><link rel="stylesheet" type="text/css" href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y"><!--[if IE]><STYLE type="text/css">.altova-rotate-left-textbox{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)} .altova-rotate-right-textbox{filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1)} </STYLE><![endif]--><!--[if !IE]><!--><style type="text/css">.altova-rotate-left-textbox{-webkit-transform: rotate(-90deg) translate(-100%, 0%); -webkit-transform-origin: 0% 0%;-moz-transform: rotate(-90deg) translate(-100%, 0%); -moz-transform-origin: 0% 0%;-ms-transform: rotate(-90deg) translate(-100%, 0%); -ms-transform-origin: 0% 0%;}.altova-rotate-right-textbox{-webkit-transform: rotate(90deg) translate(0%, -100%); -webkit-transform-origin: 0% 0%;-moz-transform: rotate(90deg) translate(0%, -100%); -moz-transform-origin: 0% 0%;-ms-transform: rotate(90deg) translate(0%, -100%); -ms-transform-origin: 0% 0%;}</style><!--<![endif]--><style type="text/css">@page { margin-left:2cm; margin-right:2cm; margin-top:2cm; margin-bottom:2cm } @media print { br.altova-page-break { page-break-before: always; } }</style><center style="text-align:center; "><span class="caption">Report for diagram Diagram_Relacional</span></center><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#8FF96D42-92B3E5FC6871__dg_rm" id="8FF96D42-92B3E5FC6871">ADMIN.BANCO_IMAGENS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_PROJETOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">DESCRICAO_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">ALTURA_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">LARGURA_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">NUM_CANAIS_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">TOTAL_PIXELS_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">TIPO_IMG_ORIGINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (45)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">BANCO_IMAGENS_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_BANCO_IMAG_PROJETOS1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">BANCO_IMAGENS_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_BANCO_IMAG_PROJ</td><td class="td">PROJETOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FAVORAB_FAS_BANCO_IMAGENS_FK</td><td class="td">FAVORABILIDADES_FAS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr><tr><td class="td">FK_CLASSIF_BANCO_IMAGENS</td><td class="td">CLASSIFICACOES</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr><tr><td class="td">FK_IMGS_SEGMENT_BANCO_IMGS</td><td class="td">IMAGENS_SEGMENTADAS</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr><tr><td class="td">FK_IMG_CLI_FAV_BANCO_IMGS</td><td class="td">IMAGEM_CLIMA_FAVORAB</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#426014AC-D7B47B6445F8__dg_rm" id="426014AC-D7B47B6445F8">ADMIN.CLASSIFICACOES</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_CLASSIFICACAO</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_PROJETOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">RESULTADO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">PORCENTAGEM_TREINO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">PORCENTAGEM_TESTE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">TIPO_CLASSIFICACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (30)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">RELATORIO_CLASSIFICACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">MATRIZ_CONFUSAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">CURVA_ROC</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">TUPLAS_BINARIAS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">TUPLAS_BINARIAS_LIMPAS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">PERC_TUPLAS_DUPL_ELIMIN</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">CLASSIFICACOES_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_CLASSIFICACAO</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_CLASSIFICACAO_PROJETOS1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">CLASSIFICACOES_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_CLASSIFICACAO</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_CLASSIF_BANCO_IMAGENS</td><td class="td">BANCO_IMAGENS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr><tr><td class="td">FK_CLASSIF_PROJ</td><td class="td">PROJETOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#7E75EDF2-CD5B2E3B865E__dg_rm" id="7E75EDF2-CD5B2E3B865E">ADMIN.DADOS_CLIMATICOS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_PROJETOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">LOCAL_ESTACAO_CLIMATICA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (150)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">PERIODO_MEDICAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (40)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">DATA_MEDICAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">DATE</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">PRECIPITACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">TEMPERATURA_MAX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">TEMPERATURA_MIN</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">UMIDADE_RELATIVA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">PONTO_ORVALHO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">TEMPERATURA_MED_COMPENSADA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">REGIAO_ESTACAO_CLIMATICA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (150)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">STATUS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (20)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">DADOS_CLIMATICOS_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_DADOS_CLIMAT_PROJETO1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">DADOS_CLIMATICOS_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_DADOS_CLIMATICOS_PROJ</td><td class="td">PROJETOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_IMG_CLI_FAV_DADOS_CLIMATICOS</td><td class="td">IMAGEM_CLIMA_FAVORAB</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#2B75A596-C859345A5149__dg_rm" id="2B75A596-C859345A5149">ADMIN.DADOS_PLANTA_SOJA</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_PROJETOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">VARIEDADE_CULTURA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (200)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">DISTANCIA_LINHA_CULTURA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">ALTURA_PLANTA_CULTURA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">DISTANCIA_PLANTA_CULTURA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">PLANTAS_METRO_LINEAR</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">STATUS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (50)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">DADOS_PLANTA_SOJA_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_DAD_PLANT_SOJA_PROJETO1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">DADOS_PLANTA_SOJA_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_DADOS_PLANTA_PROJ</td><td class="td">PROJETOS</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_IMG_CLI_FAV_DADOS_PL_SOJA</td><td class="td">IMAGEM_CLIMA_FAVORAB</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#A156A99B-DAC5AE628C2B__dg_rm" id="A156A99B-DAC5AE628C2B">ADMIN.FAVORABILIDADES_FAS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_FAVORABILIDADE</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">RESULTADO_FAVORABILIDADE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (500)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">VETOR_FAVORABILIDADE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (500)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">JANELA_TEMPO_INICIAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">DATE</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">JANELA_TEMPO_FINAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">DATE</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">ABORDAGEM_FUSAO_DADOS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">V1</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">V2</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">V3</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">V4</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">V5</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">V6</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">14</td><td class="td">V7</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">FAVORABILIDADE_FAS_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_FAVORABILIDADE</td><td class="td_c">ASC</td></tr><tr><td class="td">FAVORABILIDADE_FAS_PK</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_FAVORABILIDADE</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FAVORAB_FAS_BANCO_IMAGENS_FK</td><td class="td">BANCO_IMAGENS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#78B68DE7-BF11CF9E32AB__dg_rm" id="78B68DE7-BF11CF9E32AB">ADMIN.FUNGICIDAS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">TRATAMENTO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">DOSAGEM_1</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (50)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">DOSAGEM_2</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (50)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">SEVERIDADE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">PORCENTAGEM_CONTROLE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">PRODUTIVIDADE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">ID_FUNGICIDA</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER - AI - ID</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">FUNGICIDAS_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_FUNGICIDA</td><td class="td_c">ASC</td></tr><tr><td class="td">FUNGICIDAS_PK</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_FUNGICIDA</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">RECOMEND_FUNG_FUNGICIDAS_FK</td><td class="td">RECOMENDACOES_FUNGICIDAS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_FUNGICIDA</td><td class="td">ID_FUNGICIDA</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#4D5775FD-3D7451C4B435__dg_rm" id="4D5775FD-3D7451C4B435">ADMIN.IMAGEM_CLIMA_FAVORAB</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_IMAGEM_CLIMA_FAVORAB</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">ID_TAB_VERD_FAVORAB</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">DESC_FAVORAB</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (40)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">IMAGEM_CLIMA_FAVORAB_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_IMAGEM_CLIMA_FAVORAB</td><td class="td_c">ASC</td></tr><tr><td class="td">IMAGEM_CLIMA_FAVORAB_PK</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_IMAGEM_CLIMA_FAVORAB</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_IMG_CLI_FAV_BANCO_IMGS</td><td class="td">BANCO_IMAGENS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr><tr><td class="td">FK_IMG_CLI_FAV_DADOS_CLIMATICOS</td><td class="td">DADOS_CLIMATICOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td">ID_DADOS_CLIMATICOS</td><td class="td_c"></td></tr><tr><td class="td">FK_IMG_CLI_FAV_DADOS_PL_SOJA</td><td class="td">DADOS_PLANTA_SOJA</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td">ID_DADOS_PLANTA_SOJA</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#5F474C78-3472113D78D8__dg_rm" id="5F474C78-3472113D78D8">ADMIN.IMAGENS_SEGMENTADAS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">IMG_SEGMENT_REFERENCIA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">IMG_FILTRO_MEDIANA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">IMG_CANAL_VERDE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">IMG_JANELA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">IMG_LIMIARIZADA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">CLASSE_COR</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (30)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">DESCRICAO_IMG_ORIGEM</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (60)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c"></td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">IMG_ROTULO_ESCOLHIDO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">MSE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">PSNR</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">SSIM</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">14</td><td class="td">HISTOGRAMA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">15</td><td class="td">BOXPLOT_SEMENTES</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">16</td><td class="td">BOXPLOT_SEMENTES_CALCULO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">17</td><td class="td">OUTLIERS_BOXPLOT_SEMENTES</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">18</td><td class="td">OUTLIERS_BOXPLOT_SEMENTES_CALCULO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">IMAGENS_SEGMENTADAS_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c">ASC</td></tr><tr><td class="td">IMAGENS_SEGMENTADAS_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_IMGS_SEGMENT_BANCO_IMGS</td><td class="td">BANCO_IMAGENS</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_BANCO_IMAGENS</td><td class="td">ID_BANCO_IMAGENS</td><td class="td_c"></td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_SEGMENT_IMG_SEGMENT</td><td class="td">SEGMENTACAO</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#01861397-54C0D0DF93AE__dg_rm" id="01861397-54C0D0DF93AE">ADMIN.PROJETOS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_PROJETOS</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">NOME_PROJETO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (200)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">TIPO_PROJETO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">PROJETOS_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">PROJETOS_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_BANCO_IMAG_PROJ</td><td class="td">BANCO_IMAGENS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr><tr><td class="td">FK_CLASSIF_PROJ</td><td class="td">CLASSIFICACOES</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr><tr><td class="td">FK_DADOS_CLIMATICOS_PROJ</td><td class="td">DADOS_CLIMATICOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr><tr><td class="td">FK_DADOS_PLANTA_PROJ</td><td class="td">DADOS_PLANTA_SOJA</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr><tr><td class="td">FK_SEGMENT_PROJ</td><td class="td">SEGMENTACAO</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#42A0F32F-4039BCB233D9__dg_rm" id="42A0F32F-4039BCB233D9">ADMIN.RECOMENDACOES</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">RECOMENDACAO_FAVORAB_BAIXA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">RECOMENDACAO_FAVORAB_MEDIA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">RECOMENDACAO_FAVORAB_ALTA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">ID_RECOMENDACAO</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER - AI - ID</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">RECOMENDACOES_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_RECOMENDACAO</td><td class="td_c">ASC</td></tr><tr><td class="td">RECOMENDACOES_PK</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_RECOMENDACAO</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">RECOMEND_FUNG_RECOMENDACOES_FK</td><td class="td">RECOMENDACOES_FUNGICIDAS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_RECOMENDACOES</td><td class="td">ID_RECOMENDACAO</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#FBC5461E-E859317D335F__dg_rm" id="FBC5461E-E859317D335F">ADMIN.RECOMENDACOES_FUNGICIDAS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_FUNGICIDA</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_RECOMENDACOES_FUNGICIDA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER - AI - ID</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">ID_RECOMENDACOES</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">PLANTA_FUNGICIDAS_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_RECOMENDACOES_FUNGICIDA</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">RECOMEND_FUNG_FUNGICIDAS_FK</td><td class="td">FUNGICIDAS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_FUNGICIDA</td><td class="td">ID_FUNGICIDA</td><td class="td_c"></td></tr><tr><td class="td">RECOMEND_FUNG_RECOMENDACOES_FK</td><td class="td">RECOMENDACOES</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_RECOMENDACOES</td><td class="td">ID_RECOMENDACAO</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#6448DB16-C6C25D391F34__dg_rm" id="6448DB16-C6C25D391F34">ADMIN.ROTULOS_SEGMENTADOS</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_ROTULOS_SEGMENTADOS</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_SEGMENTACAO</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c"></td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">IMG_ROTULO_SEGMENTADO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">BLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">CLASSE_COR</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">VARCHAR2 (30)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">ROTULOS_SEGMENTADOS_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_ROTULOS_SEGMENTADOS</td><td class="td_c">ASC</td></tr><tr><td class="td">ROTULOS_SEGMENTADOS_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_ROTULOS_SEGMENTADOS</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_ROT_SEGMENT_SEGMENTACAO</td><td class="td">SEGMENTACAO</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_SEGMENTACAO</td><td class="td">ID_SEGMENTACAO</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#3E24020A-AB025A6B7774__dg_rm" id="3E24020A-AB025A6B7774">ADMIN.SEGMENTACAO</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_SEGMENTACAO</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">ID_PROJETOS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">ID_SEMENTES</td><td class="td_c"></td><td class="td_c">F</td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">DATA_HORA_PROJETO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (25)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">COORDENADAS_SEMENTE_CENTRAL</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (15)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">COORDENADAS_CALC_JANELA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">TOTAL_PIXELS_JANELA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">TOTAL_SEMENTES_CALCULADAS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">ERRO_ESTATISTICO_CALCULADO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">OPERACAO_PROJETO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">DESVIO_PADRAO_PROJETO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">LIMIAR_1_SEGMENTACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">14</td><td class="td">LIMIAR_2_SEGMENTACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">15</td><td class="td">FAIXA_LIMIARES</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (30)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">16</td><td class="td">VARIANCIA_SEGMENTACAO</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">17</td><td class="td">COORD_JANELA_FINAL_OBJ_INTER</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (40)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">18</td><td class="td">SEMENTES_CALCULADAS_JANELA</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">19</td><td class="td">RELATORIO_COLETA_AUT_SEMENTE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">20</td><td class="td">RELATORIO_DADOS_ESTATISTICOS</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">CLOB</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">FK_SEGMENT_IMG_SEGMENT1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_SEGMENT_PROJETOS1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_PROJETOS</td><td class="td_c">ASC</td></tr><tr><td class="td">FK_SEGMENT_SEMENTES1_IDX</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_SEMENTES</td><td class="td_c">ASC</td></tr><tr><td class="td">SEGMENTACAO_PRIMARY</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_SEGMENTACAO</td><td class="td_c">ASC</td></tr><tr><td class="td">SEGMENTACAO_PRIMARY</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_SEGMENTACAO</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referring to)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Refering To</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_SEGMENT_IMG_SEGMENT</td><td class="td">IMAGENS_SEGMENTADAS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td">ID_IMG_SEGMENTADAS</td><td class="td_c"></td></tr><tr><td class="td">FK_SEGMENT_PROJ</td><td class="td">PROJETOS</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_PROJETOS</td><td class="td">ID_PROJETOS</td><td class="td_c"></td></tr><tr><td class="td">FK_SEGMENT_SEMENT</td><td class="td">SEMENTES</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_SEMENTES</td><td class="td">ID_SEMENTES</td><td class="td_c"></td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_ROT_SEGMENT_SEGMENTACAO</td><td class="td">ROTULOS_SEGMENTADOS</td><td class="td_c"></td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_SEGMENTACAO</td><td class="td">ID_SEGMENTACAO</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#B8D66909-0DE019C05EC0__dg_rm" id="B8D66909-0DE019C05EC0">ADMIN.SEMENTES</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_SEMENTES</td><td class="td_c">P</td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">DESCRICAO_COR_SEMENTE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (100)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">COR_RGB_SEMENTE</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">VARCHAR2 (45)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">DADOS_SEMENTES</td><td class="td_c"></td><td class="td_c"></td><td class="td_c"></td><td class="td">LONG</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">SEMENTES_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_SEMENTES</td><td class="td_c">ASC</td></tr><tr><td class="td">SEMENTES_PK</td><td class="td_c">PK</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_SEMENTES</td><td class="td_c">ASC</td></tr></tbody></table><p></p><span class="t_cap">Foreign Keys (referred from)</span><br><table class="w_25"><thead><tr><th class="td_h_h w_6"><span>Name</span></th><th class="td_h_h w_5"><span>Referred From</span></th><th class="td_h_h w_1p5"><span>Mandatory</span></th><th class="td_h_h w_1p5"><span>Transferable</span></th><th class="td_h_h w_1"><span>In Arc</span></th><th class="td_h_h w_4"><span>Columns</span></th><th class="td_h_h w_4"><span>Referred Columns</span></th><th class="td_h_h w_2"><span>Delete Rule</span></th></tr></thead><tbody><tr><td class="td">FK_SEGMENT_SEMENT</td><td class="td">SEGMENTACAO</td><td class="td_c">Y</td><td class="td_c">Y</td><td class="td_c"></td><td class="td">ID_SEMENTES</td><td class="td">ID_SEMENTES</td><td class="td_c"></td></tr></tbody></table><p><span>&nbsp;</span></p><table class="w_16"><tbody><tr><td class="td_h_v w_4"><span>Table Name</span></td><td class="obj_name w_11p5"><a href="https://gffcc5fb9604a65-testedoutorado.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/_sdw/modeler/diagrams/1/report?tables=y&amp;views=y&amp;toc=y&amp;diagram=y&amp;vselect=y#70022807-F755786ED5EC__dg_rm" id="70022807-F755786ED5EC">ADMIN.TAB_VERD_FAVORABILIDADE</a></td></tr><tr><td class="td_h_v"><span>Object Type Name</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>Description</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Prebuilt</span></td><td class="td"></td></tr><tr><td class="td_h_v"><span>MV Query</span></td><td class="td"><pre style="word-wrap:break-word; white-space: pre-wrap; white-space: -moz-pre-wrap; "></pre></td></tr></tbody></table><p></p><span class="t_cap">Columns</span><br><table class="w_25"><thead><tr><th class="td_h_h w_1"><span>No</span></th><th class="td_h_h w_5"><span>Column Name</span></th><th class="td_h_h w_0p8"><span>PK</span></th><th class="td_h_h w_0p8"><span>FK</span></th><th class="td_h_h w_0p8"><span>M</span></th><th class="td_h_h w_4"><span>Data Type</span></th><th class="td_h_h w_2p9"><span>Formula</span><br><span>(Default Value)</span></th><th class="td_h_h w_2p9"><span>Security</span></th><th class="td_h_h w_6p52"><span>Description</span></th></tr></thead><tbody><tr><td class="td_r">1</td><td class="td">ID_TAB_VERD_FAVORAB</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">2</td><td class="td">V1</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">3</td><td class="td">V2</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">4</td><td class="td">V3</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">5</td><td class="td">V4</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">6</td><td class="td">V5</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">7</td><td class="td">V6</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">8</td><td class="td">V7</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">9</td><td class="td">S</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">NUMBER (*,0)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">10</td><td class="td">P_V1</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">11</td><td class="td">P_V2</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">12</td><td class="td">P_V3</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">13</td><td class="td">P_V4</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">14</td><td class="td">P_V5</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">15</td><td class="td">P_V6</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr><tr><td class="td_r">16</td><td class="td">P_V7</td><td class="td_c"></td><td class="td_c"></td><td class="td_c">Y</td><td class="td">FLOAT (126)</td><td class="td"></td><td class="td"></td><td class="td"></td></tr></tbody></table><p></p><span class="t_cap">Indexes</span><br><table class="w_25"><thead><tr><th class="td_h_h w_7"><span>Index Name</span></th><th class="td_h_h w_1"><span>State</span></th><th class="td_h_h w_2"><span>Functional</span></th><th class="td_h_h w_1p5"><span>Spatial</span></th><th class="td_h_h w_5p5"><span>Expression</span></th><th class="td_h_h w_7"><span>Column Name</span></th><th class="td_h_h w_1"><span>Sort</span><br><span>Order</span></th></tr></thead><tbody><tr><td class="td">TABELA_VERDADE_FAVORABILIDADE_PK</td><td class="td_c">UN</td><td class="td_c"></td><td class="td_c"></td><td class="td"></td><td class="td">ID_TAB_VERD_FAVORAB</td><td class="td_c">ASC</td></tr></tbody></table>
+<br><br><br><br>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="2500" height="1703" stroke-opacity="0.4">
+<style type="text/css">
+  
+ text.c_name,text.column_dt,text.pk_name,text.nnc,text.t_name  { stroke: none; 
+    fill: black; 
+    fill-opacity: 0.8; 
+     font-size: 10; }
+ text.column_dt{ fill-opacity: 0.4; }
+ text.pk_name{ fill: #309FDB; fill-opacity: 1.0; }
+ text.nnc{ fill: #E95B54; fill-opacity: 1.0; }
+ text.t_name{ fill-opacity: 1.0; }
+ 
+ </style>
+<defs id="dmw_defs">
+<svg id="fk_sym" viewBox="0 0 48.665 48.665" style="enable-background:new 0 0 48.665 48.665;">
+<g>
+<path d="M40.332,31.592c-2.377,0-4.515,1-6.033,2.598l-17.737-8.686c0.061-0.406,0.103-0.82,0.103-1.246    c0-0.414-0.04-0.818-0.098-1.215l17.711-8.589c1.519,1.609,3.666,2.619,6.054,2.619c4.603,0,8.333-3.731,8.333-8.333    c0-4.603-3.73-8.333-8.333-8.333s-8.333,3.73-8.333,8.333c0,0.414,0.04,0.817,0.098,1.215l-17.709,8.589    c-1.519-1.609-3.666-2.619-6.054-2.619C3.73,15.925,0,19.656,0,24.258c0,4.603,3.73,8.333,8.333,8.333    c2.377,0,4.515-1,6.033-2.596l17.736,8.685c-0.062,0.406-0.104,0.82-0.104,1.245c0,4.604,3.73,8.333,8.333,8.333    s8.333-3.729,8.333-8.333C48.665,35.322,44.935,31.592,40.332,31.592z" fill="#13bf3b"></path>
+</g>
+</svg>
+<svg id="pk_sym" viewBox="0 0 480.509 480.509" style="enable-background:new 0 0 480.509 480.509;">
+<g>
+<path d="M418.119,331.046c4.094,4.374,7.766,8.186,10.996,11.416c3.237,3.238,6.714,6.376,10.427,9.422   c3.71,3.042,6.427,4.568,8.135,4.568c3.241,0,9.517-4.661,18.843-13.99c9.328-9.321,13.989-15.604,13.989-18.842   c0-1.523-2.714-5.421-8.138-11.704c-5.421-6.276-12.364-13.702-20.838-22.271c-8.473-8.565-16.703-16.744-24.694-24.55   c-8.001-7.81-15.8-15.373-23.417-22.703c-7.611-7.327-11.992-11.56-13.135-12.703c-1.902-1.902-4.093-2.853-6.563-2.853   c-3.237,0-9.521,4.661-18.843,13.988c-9.328,9.322-13.989,15.605-13.989,18.843c0,1.711,1.522,4.421,4.568,8.138   c3.046,3.71,6.188,7.187,9.421,10.424c3.23,3.23,7.047,6.899,11.42,10.992c4.377,4.093,6.848,6.423,7.423,6.995l-27.408,27.404   L254.954,222.268c24.94-33.498,37.408-68.236,37.408-104.211c0-31.024-9.761-56.293-29.263-75.801   c-19.512-19.511-44.778-29.265-75.805-29.265c-30.454,0-60.244,9.042-89.363,27.119c-29.121,18.083-52.727,41.686-70.808,70.808   C9.042,140.038,0,169.828,0,200.28c0,31.029,9.753,56.286,29.265,75.803c19.511,19.517,44.777,29.27,75.801,29.27   c35.976,0,70.71-12.467,104.212-37.407l191.574,191.579c5.332,5.328,11.796,7.994,19.417,7.994c7.991,0,15.704-3.72,23.12-11.14   c7.426-7.426,11.143-15.129,11.143-23.127c0-7.617-2.666-14.092-7.994-19.417l-62.811-62.811l27.405-27.404   C411.699,324.195,414.033,326.666,418.119,331.046z M221.556,161.458c-10.656,10.657-23.601,15.987-38.828,15.987   c-7.996,0-15.896-1.812-23.7-5.43c3.617,7.808,5.426,15.706,5.426,23.7c0,15.229-5.327,28.171-15.987,38.828   c-10.66,10.655-23.606,15.986-38.831,15.986c-15.227,0-28.168-5.325-38.828-15.986c-10.657-10.657-15.987-23.599-15.987-38.828   c0-15.227,5.327-28.171,15.987-38.828C81.464,146.23,94.409,140.9,109.636,140.9c7.992,0,15.893,1.809,23.695,5.424   c-3.616-7.804-5.424-15.706-5.424-23.699c0-15.227,5.327-28.171,15.987-38.828c10.66-10.657,23.604-15.987,38.831-15.987   c15.227,0,28.171,5.327,38.828,15.987c10.657,10.66,15.987,23.601,15.987,38.828C237.539,137.852,232.209,150.797,221.556,161.458z   " fill="#ff8345"></path>
+</g>
+</svg>
+<svg id="uk_sym" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;">
+<g>
+	<polygon points="236.99,11.41 0,246.348 236.99,478.678 236.99,350.609 129.864,245 236.99,139.391  " fill="#0064fb"></polygon>
+<polygon points="253.01,478.59 490,243.651 253.01,11.322 253.01,139.391 360.136,245 253.01,350.609  " fill="#0064fb"></polygon>
+</g>
+</svg>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath4_0">
+<rect x="0" y="0" width="436" height="128"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath16_0">
+<rect x="0" y="0" width="316" height="167"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath3_0">
+<rect x="0" y="0" width="244" height="115"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath14_0">
+<rect x="0" y="0" width="334" height="229"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath10_0">
+<rect x="0" y="0" width="420" height="203"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath9_0">
+<rect x="0" y="0" width="397" height="216"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath7_0">
+<rect x="0" y="0" width="392" height="281"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath12_0">
+<rect x="0" y="0" width="412" height="333"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath2_0">
+<rect x="0" y="0" width="400" height="424"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath11_0">
+<rect x="0" y="0" width="319" height="128"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath13_0">
+<rect x="0" y="0" width="317" height="128"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath15_0">
+<rect x="0" y="0" width="450" height="151"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath6_0">
+<rect x="0" y="0" width="371" height="281"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath8_0">
+<rect x="0" y="0" width="440" height="261"></rect>
+</clippath>
+<clippath clipPathUnits="userSpaceOnUse" id="clipPath5_0">
+<rect x="0" y="0" width="353" height="294"></rect>
+</clippath>
+</defs>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M412 1491 L536 1491"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="412 1491 420 1487 420 1495" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M536.0 1497.0 L524.0 1491.0 L536.0 1485.0 M523.4000005722046 1497.0 L523.4000005722046 1485.0" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M230 436 L230 549"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="230 436 234 444 226 444" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M224.0 549.0 L230.0 537.0 L236.0 549.0 M224.0 536.4000005722046 L236.0 536.4000005722046" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M230 737 L230 677"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="230 737 226 729 234 729" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M236.0 677.0 L230.0 689.0 L224.0 677.0 M236.0 689.5999994277954 L224.0 689.5999994277954" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M1648 534 L1806 462"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1648 534 1654 528 1656 534" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1808.0 467.0 L1796.0 466.0 L1804.0 457.0 M1797.5 471.19999980926514 L1793.5 461.19999980926514" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M936 367 L1806 367"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="936 367 944 363 944 371" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1806.0 373.0 L1794.0 367.0 L1806.0 361.0 M1793.4000005722046 373.0 L1793.4000005722046 361.0" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2017 977 L2017 469"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2017 977 2013 969 2021 969" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M2023.0 469.0 L2017.0 481.0 L2011.0 469.0 M2023.0 481.5999994277954 L2011.0 481.5999994277954" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M1951 1091 L1465 1091"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1951 1091 1943 1095 1943 1087" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1465.0 1085.0 L1477.0 1091.0 L1465.0 1097.0 M1477.5999994277954 1085.0 L1477.5999994277954 1097.0" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2118 977 L2118 862"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2118 977 2114 969 2122 969" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M2124.0 862.0 L2118.0 874.0 L2112.0 862.0 M2124.0 874.5999994277954 L2112.0 874.5999994277954" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M2118 1206 L2118 1314"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2118 1206 2122 1214 2114 1214" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M2112.0 1314.0 L2118.0 1302.0 L2124.0 1314.0 M2112.0 1301.4000005722046 L2124.0 1301.4000005722046" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M821 717 L1951 1043"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="821 717 829 716 827 722" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1950.0 1048.0 L1941.0 1041.0 L1952.0 1038.0 M1939.5 1045.9000000953674 L1941.5 1035.9000000953674" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M821 682 L1251 682"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="821 682 829 678 829 686" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1251.0 688.0 L1239.0 682.0 L1251.0 676.0 M1238.4000005722046 688.0 L1238.4000005722046 676.0" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M750 624 L750 498"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="750 624 746 616 754 616" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M756.0 498.0 L750.0 510.0 L744.0 498.0 M756.0 510.5999994277954 L744.0 510.5999994277954" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M781 739 L1112 968"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="781 739 789 740 785 746" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M1109.0 972.0 L1104.0 962.0 L1115.0 964.0 M1100.6000003814697 965.7000002861023 L1106.6000003814697 957.7000002861023" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2088 1491 L936 1491"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2088 1491 2080 1495 2080 1487" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M936.0 1485.0 L948.0 1491.0 L936.0 1497.0 M948.5999994277954 1485.0 L948.5999994277954 1497.0" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M736 739 L736 1279"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="736 739 740 747 732 747" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M730.0 1279.0 L736.0 1267.0 L742.0 1279.0 M730.0 1266.4000005722046 L742.0 1266.4000005722046" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M536 1367 L352 1254"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="536 1367 528 1366 532 1360" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+<path stroke-dasharray="none" d="M355.0 1249.0 L362.0 1260.0 L349.0 1259.0 M365.5 1255.2999997138977 L359.5 1265.2999997138977" fill="none" stroke-width="1" stroke-opacity="0.4" stroke="rgb(0,0,0)"></path>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M412 1491 L536 1491"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="412 1491 420 1487 420 1495" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M230 436 L230 549"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="230 436 234 444 226 444" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M230 737 L230 677"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="230 737 226 729 234 729" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M1648 534 L1806 462"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1648 534 1654 528 1656 534" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M936 367 L1806 367"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="936 367 944 363 944 371" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2017 977 L2017 469"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2017 977 2013 969 2021 969" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M1951 1091 L1465 1091"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="1951 1091 1943 1095 1943 1087" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2118 977 L2118 862"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2118 977 2114 969 2122 969" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M2118 1206 L2118 1314"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2118 1206 2122 1214 2114 1214" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M821 717 L1951 1043"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="821 717 829 716 827 722" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M821 682 L1251 682"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="821 682 829 678 829 686" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M750 624 L750 498"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="750 624 746 616 754 616" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M781 739 L1112 968"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="781 739 789 740 785 746" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M2088 1491 L936 1491"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="2088 1491 2080 1495 2080 1487" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-width="1" d="M736 739 L736 1279"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="736 739 740 747 732 747" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g stroke-linecap="butt">
+<path stroke-opacity="0.4" stroke="rgb(0,0,0)" fill="none" stroke-dasharray="8,8" stroke-width="1" d="M536 1367 L352 1254"></path>
+<polygon stroke="rgb(0,0,0)" stroke-dasharray="none" points="536 1367 528 1366 532 1360" fill="rgb(0,0,0)" stroke-width="1" stroke-opacity="0.4" fill-opacity="0.4"></polygon>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath4_0)" transform="translate(12,549)">
+<rect x="0" y="0" width="435" height="127"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath4_0)" transform="translate(12,549)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="435" height="127" stroke-opacity="0.09803922"></rect><a xlink:href="#FBC5461E-E859317D335F">
+<text id="FBC5461E-E859317D335F__dg_rm" x="98" y="13" class="t_name">
+ADMIN.RECOMENDACOES_FUNGICIDAS
+</text></a>
+<line x1="0" y1="17" x2="434" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="t_name">
+F
+</text>
+<text x="26" y="30" class="c_name">
+ID_FUNGICIDA
+</text>
+<text x="254" y="30" class="column_dt">
+NUMBER
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="26" y="43" class="c_name">
+ID_RECOMENDACOES_FUNGICIDA
+</text>
+<text x="254" y="43" class="column_dt">
+NUMBER
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="5" y="56" class="t_name">
+F
+</text>
+<text x="26" y="56" class="c_name">
+ID_RECOMENDACOES
+</text>
+<text x="254" y="56" class="column_dt">
+NUMBER
+</text>
+<line x1="0" y1="62" x2="434" y2="62" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#78B68DE7-BF11CF9E32AB">
+<text x="16" y="75" class="c_name">
+RECOMEND_FUNG_FUNGICIDAS_FK (ID_FUNGICIDA)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="82" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#42A0F32F-4039BCB233D9">
+<text x="16" y="88" class="c_name">
+RECOMEND_FUNG_RECOMENDACOES_FK (ID_RECOMENDACOES)
+</text></a>
+<line x1="0" y1="94" x2="434" y2="94" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="107" class="t_name">
+U
+</text>
+<text x="16" y="107" class="c_name">
+PLANTA_FUNGICIDAS_PK (ID_RECOMENDACOES_FUNGICIDA)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath16_0)" transform="translate(12,737)">
+<rect x="0" y="0" width="315" height="166"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath16_0)" transform="translate(12,737)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="315" height="166" stroke-opacity="0.09803922"></rect><a xlink:href="#78B68DE7-BF11CF9E32AB">
+<text id="78B68DE7-BF11CF9E32AB__dg_rm" x="94" y="13" class="t_name">
+ADMIN.FUNGICIDAS
+</text></a>
+<line x1="0" y1="17" x2="314" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="26" y="30" class="c_name">
+TRATAMENTO
+</text>
+<text x="206" y="30" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="26" y="43" class="c_name">
+DOSAGEM_1
+</text>
+<text x="206" y="43" class="column_dt">
+VARCHAR2 (50)
+</text>
+<text x="26" y="56" class="c_name">
+DOSAGEM_2
+</text>
+<text x="206" y="56" class="column_dt">
+VARCHAR2 (50)
+</text>
+<text x="26" y="69" class="c_name">
+SEVERIDADE
+</text>
+<text x="206" y="69" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="82" class="c_name">
+PORCENTAGEM_CONTROLE
+</text>
+<text x="206" y="82" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="95" class="c_name">
+PRODUTIVIDADE
+</text>
+<text x="206" y="95" class="column_dt">
+NUMBER
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="5" y="108" class="pk_name">
+P
+</text>
+<text x="26" y="108" class="pk_name">
+ID_FUNGICIDA
+</text>
+<text x="206" y="108" class="column_dt">
+NUMBER
+</text>
+<line x1="0" y1="114" x2="314" y2="114" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="121" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="127" class="c_name">
+FUNGICIDAS_PK (ID_FUNGICIDA)
+</text>
+<line x1="0" y1="133" x2="314" y2="133" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="146" class="t_name">
+U
+</text>
+<text x="16" y="146" class="c_name">
+FUNGICIDAS_PK (ID_FUNGICIDA)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath3_0)" transform="translate(576,624)">
+<rect x="0" y="0" width="243" height="114"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath3_0)" transform="translate(576,624)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="243" height="114" stroke-opacity="0.09803922"></rect><a xlink:href="#01861397-54C0D0DF93AE">
+<text id="01861397-54C0D0DF93AE__dg_rm" x="66" y="13" class="t_name">
+ADMIN.PROJETOS
+</text></a>
+<line x1="0" y1="17" x2="242" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_PROJETOS
+</text>
+<text x="142" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="26" y="43" class="c_name">
+NOME_PROJETO
+</text>
+<text x="142" y="43" class="column_dt">
+VARCHAR2 (200)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+TIPO_PROJETO
+</text>
+<text x="142" y="56" class="column_dt">
+VARCHAR2 (100)
+</text>
+<line x1="0" y1="62" x2="242" y2="62" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="69" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="75" class="c_name">
+PROJETOS_PRIMARY (ID_PROJETOS)
+</text>
+<line x1="0" y1="81" x2="242" y2="81" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="94" class="t_name">
+U
+</text>
+<text x="16" y="94" class="c_name">
+PROJETOS_PRIMARY (ID_PROJETOS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath14_0)" transform="translate(1951,977)">
+<rect x="0" y="0" width="333" height="228"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath14_0)" transform="translate(1951,977)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="333" height="228" stroke-opacity="0.09803922"></rect><a xlink:href="#8FF96D42-92B3E5FC6871">
+<text id="8FF96D42-92B3E5FC6871__dg_rm" x="91" y="13" class="t_name">
+ADMIN.BANCO_IMAGENS
+</text></a>
+<line x1="0" y1="17" x2="332" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_BANCO_IMAGENS
+</text>
+<text x="246" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_PROJETOS
+</text>
+<text x="246" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+DESCRICAO_IMG_ORIGINAL
+</text>
+<text x="246" y="56" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="26" y="69" class="c_name">
+IMG_ORIGINAL
+</text>
+<text x="246" y="69" class="column_dt">
+BLOB
+</text>
+<text x="18" y="82" class="nnc">
+*
+</text>
+<text x="26" y="82" class="c_name">
+ALTURA_IMG_ORIGINAL
+</text>
+<text x="246" y="82" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="95" class="nnc">
+*
+</text>
+<text x="26" y="95" class="c_name">
+LARGURA_IMG_ORIGINAL
+</text>
+<text x="246" y="95" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+NUM_CANAIS_IMG_ORIGINAL
+</text>
+<text x="246" y="108" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="121" class="nnc">
+*
+</text>
+<text x="26" y="121" class="c_name">
+TOTAL_PIXELS_IMG_ORIGINAL
+</text>
+<text x="246" y="121" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="134" class="nnc">
+*
+</text>
+<text x="26" y="134" class="c_name">
+TIPO_IMG_ORIGINAL
+</text>
+<text x="246" y="134" class="column_dt">
+VARCHAR2 (45)
+</text>
+<line x1="0" y1="140" x2="332" y2="140" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="147" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="153" class="c_name">
+BANCO_IMAGENS_PRIMARY (ID_BANCO_IMAGENS)
+</text>
+<line x1="0" y1="159" x2="332" y2="159" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="166" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#01861397-54C0D0DF93AE">
+<text x="16" y="172" class="c_name">
+FK_BANCO_IMAG_PROJ (ID_PROJETOS)
+</text></a>
+<line x1="0" y1="178" x2="332" y2="178" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="191" class="t_name">
+U
+</text>
+<text x="16" y="191" class="c_name">
+BANCO_IMAGENS_PRIMARY (ID_BANCO_IMAGENS)
+</text>
+<text x="16" y="204" class="c_name">
+FK_BANCO_IMAG_PROJETOS1_IDX (ID_PROJETOS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath10_0)" transform="translate(1806,266)">
+<rect x="0" y="0" width="419" height="202"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath10_0)" transform="translate(1806,266)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="419" height="202" stroke-opacity="0.09803922"></rect><a xlink:href="#4D5775FD-3D7451C4B435">
+<text id="4D5775FD-3D7451C4B435__dg_rm" x="106" y="13" class="t_name">
+ADMIN.IMAGEM_CLIMA_FAVORAB
+</text></a>
+<line x1="0" y1="17" x2="418" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_IMAGEM_CLIMA_FAVORAB
+</text>
+<text x="230" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_BANCO_IMAGENS
+</text>
+<text x="230" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+ID_TAB_VERD_FAVORAB
+</text>
+<text x="230" y="56" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="5" y="69" class="t_name">
+F
+</text>
+<text x="26" y="69" class="c_name">
+ID_DADOS_CLIMATICOS
+</text>
+<text x="230" y="69" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="82" class="c_name">
+DESC_FAVORAB
+</text>
+<text x="230" y="82" class="column_dt">
+VARCHAR2 (40)
+</text>
+<text x="5" y="95" class="t_name">
+F
+</text>
+<text x="26" y="95" class="c_name">
+ID_DADOS_PLANTA_SOJA
+</text>
+<text x="230" y="95" class="column_dt">
+NUMBER
+</text>
+<line x1="0" y1="101" x2="418" y2="101" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="108" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="114" class="c_name">
+IMAGEM_CLIMA_FAVORAB_PK (ID_IMAGEM_CLIMA_FAVORAB)
+</text>
+<line x1="0" y1="120" x2="418" y2="120" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="127" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#8FF96D42-92B3E5FC6871">
+<text x="16" y="133" class="c_name">
+FK_IMG_CLI_FAV_BANCO_IMGS (ID_BANCO_IMAGENS)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="140" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#7E75EDF2-CD5B2E3B865E">
+<text x="16" y="146" class="c_name">
+FK_IMG_CLI_FAV_DADOS_CLIMATICOS (ID_DADOS_CLIMATICOS)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="153" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#2B75A596-C859345A5149">
+<text x="16" y="159" class="c_name">
+FK_IMG_CLI_FAV_DADOS_PL_SOJA (ID_DADOS_PLANTA_SOJA)
+</text></a>
+<line x1="0" y1="165" x2="418" y2="165" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="178" class="t_name">
+U
+</text>
+<text x="16" y="178" class="c_name">
+IMAGEM_CLIMA_FAVORAB_PK (ID_IMAGEM_CLIMA_FAVORAB)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath9_0)" transform="translate(1251,516)">
+<rect x="0" y="0" width="396" height="215"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath9_0)" transform="translate(1251,516)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="396" height="215" stroke-opacity="0.09803922"></rect><a xlink:href="#2B75A596-C859345A5149">
+<text id="2B75A596-C859345A5149__dg_rm" x="106" y="13" class="t_name">
+ADMIN.DADOS_PLANTA_SOJA
+</text></a>
+<line x1="0" y1="17" x2="395" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_DADOS_PLANTA_SOJA
+</text>
+<text x="238" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_PROJETOS
+</text>
+<text x="238" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="56" class="c_name">
+VARIEDADE_CULTURA
+</text>
+<text x="238" y="56" class="column_dt">
+VARCHAR2 (200)
+</text>
+<text x="26" y="69" class="c_name">
+DISTANCIA_LINHA_CULTURA
+</text>
+<text x="238" y="69" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="82" class="c_name">
+ALTURA_PLANTA_CULTURA
+</text>
+<text x="238" y="82" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="95" class="c_name">
+DISTANCIA_PLANTA_CULTURA
+</text>
+<text x="238" y="95" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="108" class="c_name">
+PLANTAS_METRO_LINEAR
+</text>
+<text x="238" y="108" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="121" class="c_name">
+STATUS
+</text>
+<text x="238" y="121" class="column_dt">
+VARCHAR2 (50)
+</text>
+<line x1="0" y1="127" x2="395" y2="127" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="134" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="140" class="c_name">
+DADOS_PLANTA_SOJA_PRIMARY (ID_DADOS_PLANTA_SOJA)
+</text>
+<line x1="0" y1="146" x2="395" y2="146" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="153" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#01861397-54C0D0DF93AE">
+<text x="16" y="159" class="c_name">
+FK_DADOS_PLANTA_PROJ (ID_PROJETOS)
+</text></a>
+<line x1="0" y1="165" x2="395" y2="165" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="178" class="t_name">
+U
+</text>
+<text x="16" y="178" class="c_name">
+DADOS_PLANTA_SOJA_PRIMARY (ID_DADOS_PLANTA_SOJA)
+</text>
+<text x="16" y="191" class="c_name">
+FK_DAD_PLANT_SOJA_PROJETO1_IDX (ID_PROJETOS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath7_0)" transform="translate(2108,581)">
+<rect x="0" y="0" width="391" height="280"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath7_0)" transform="translate(2108,581)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="391" height="280" stroke-opacity="0.09803922"></rect><a xlink:href="#A156A99B-DAC5AE628C2B">
+<text id="A156A99B-DAC5AE628C2B__dg_rm" x="96" y="13" class="t_name">
+ADMIN.FAVORABILIDADES_FAS
+</text></a>
+<line x1="0" y1="17" x2="390" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_FAVORABILIDADE
+</text>
+<text x="238" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="26" y="43" class="c_name">
+RESULTADO_FAVORABILIDADE
+</text>
+<text x="238" y="43" class="column_dt">
+VARCHAR2 (500)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+VETOR_FAVORABILIDADE
+</text>
+<text x="238" y="56" class="column_dt">
+VARCHAR2 (500)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="5" y="69" class="t_name">
+F
+</text>
+<text x="26" y="69" class="c_name">
+ID_BANCO_IMAGENS
+</text>
+<text x="238" y="69" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="82" class="nnc">
+*
+</text>
+<text x="26" y="82" class="c_name">
+JANELA_TEMPO_INICIAL
+</text>
+<text x="238" y="82" class="column_dt">
+DATE
+</text>
+<text x="18" y="95" class="nnc">
+*
+</text>
+<text x="26" y="95" class="c_name">
+JANELA_TEMPO_FINAL
+</text>
+<text x="238" y="95" class="column_dt">
+DATE
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+ABORDAGEM_FUSAO_DADOS
+</text>
+<text x="238" y="108" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="26" y="121" class="c_name">
+V1
+</text>
+<text x="238" y="121" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="134" class="c_name">
+V2
+</text>
+<text x="238" y="134" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="147" class="c_name">
+V3
+</text>
+<text x="238" y="147" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="160" class="c_name">
+V4
+</text>
+<text x="238" y="160" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="173" class="c_name">
+V5
+</text>
+<text x="238" y="173" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="186" class="c_name">
+V6
+</text>
+<text x="238" y="186" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="199" class="c_name">
+V7
+</text>
+<text x="238" y="199" class="column_dt">
+NUMBER
+</text>
+<line x1="0" y1="205" x2="390" y2="205" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="212" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="218" class="c_name">
+FAVORABILIDADE_FAS_PK (ID_FAVORABILIDADE)
+</text>
+<line x1="0" y1="224" x2="390" y2="224" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="231" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#8FF96D42-92B3E5FC6871">
+<text x="16" y="237" class="c_name">
+FAVORAB_FAS_BANCO_IMAGENS_FK (ID_BANCO_IMAGENS)
+</text></a>
+<line x1="0" y1="243" x2="390" y2="243" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="256" class="t_name">
+U
+</text>
+<text x="16" y="256" class="c_name">
+FAVORABILIDADE_FAS_PK (ID_FAVORABILIDADE)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath12_0)" transform="translate(2088,1314)">
+<rect x="0" y="0" width="411" height="332"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath12_0)" transform="translate(2088,1314)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="411" height="332" stroke-opacity="0.09803922"></rect><a xlink:href="#5F474C78-3472113D78D8">
+<text id="5F474C78-3472113D78D8__dg_rm" x="106" y="13" class="t_name">
+ADMIN.IMAGENS_SEGMENTADAS
+</text></a>
+<line x1="0" y1="17" x2="410" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_IMG_SEGMENTADAS
+</text>
+<text x="310" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="43" class="c_name">
+IMG_SEGMENT_REFERENCIA
+</text>
+<text x="310" y="43" class="column_dt">
+BLOB
+</text>
+<text x="26" y="56" class="c_name">
+IMG_FILTRO_MEDIANA
+</text>
+<text x="310" y="56" class="column_dt">
+BLOB
+</text>
+<text x="26" y="69" class="c_name">
+IMG_CANAL_VERDE
+</text>
+<text x="310" y="69" class="column_dt">
+BLOB
+</text>
+<text x="26" y="82" class="c_name">
+IMG_JANELA
+</text>
+<text x="310" y="82" class="column_dt">
+BLOB
+</text>
+<text x="26" y="95" class="c_name">
+IMG_LIMIARIZADA
+</text>
+<text x="310" y="95" class="column_dt">
+BLOB
+</text>
+<text x="26" y="108" class="c_name">
+CLASSE_COR
+</text>
+<text x="310" y="108" class="column_dt">
+VARCHAR2 (30)
+</text>
+<text x="26" y="121" class="c_name">
+DESCRICAO_IMG_ORIGEM
+</text>
+<text x="310" y="121" class="column_dt">
+VARCHAR2 (60)
+</text>
+<text x="5" y="134" class="t_name">
+F
+</text>
+<text x="26" y="134" class="c_name">
+ID_BANCO_IMAGENS
+</text>
+<text x="310" y="134" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="147" class="c_name">
+IMG_ROTULO_ESCOLHIDO
+</text>
+<text x="310" y="147" class="column_dt">
+BLOB
+</text>
+<text x="26" y="160" class="c_name">
+MSE
+</text>
+<text x="310" y="160" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="173" class="c_name">
+PSNR
+</text>
+<text x="310" y="173" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="186" class="c_name">
+SSIM
+</text>
+<text x="310" y="186" class="column_dt">
+FLOAT (126)
+</text>
+<text x="26" y="199" class="c_name">
+HISTOGRAMA
+</text>
+<text x="310" y="199" class="column_dt">
+BLOB
+</text>
+<text x="26" y="212" class="c_name">
+BOXPLOT_SEMENTES
+</text>
+<text x="310" y="212" class="column_dt">
+BLOB
+</text>
+<text x="26" y="225" class="c_name">
+BOXPLOT_SEMENTES_CALCULO
+</text>
+<text x="310" y="225" class="column_dt">
+BLOB
+</text>
+<text x="26" y="238" class="c_name">
+OUTLIERS_BOXPLOT_SEMENTES
+</text>
+<text x="310" y="238" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="251" class="c_name">
+OUTLIERS_BOXPLOT_SEMENTES_CALCULO
+</text>
+<text x="310" y="251" class="column_dt">
+NUMBER (*,0)
+</text>
+<line x1="0" y1="257" x2="410" y2="257" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="264" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="270" class="c_name">
+IMAGENS_SEGMENTADAS_PRIMARY (ID_IMG_SEGMENTADAS)
+</text>
+<line x1="0" y1="276" x2="410" y2="276" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="283" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#8FF96D42-92B3E5FC6871">
+<text x="16" y="289" class="c_name">
+FK_IMGS_SEGMENT_BANCO_IMGS (ID_BANCO_IMAGENS)
+</text></a>
+<line x1="0" y1="295" x2="410" y2="295" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="308" class="t_name">
+U
+</text>
+<text x="16" y="308" class="c_name">
+IMAGENS_SEGMENTADAS_PRIMARY (ID_IMG_SEGMENTADAS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath2_0)" transform="translate(536,1279)">
+<rect x="0" y="0" width="399" height="423"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath2_0)" transform="translate(536,1279)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="399" height="423" stroke-opacity="0.09803922"></rect><a xlink:href="#3E24020A-AB025A6B7774">
+<text id="3E24020A-AB025A6B7774__dg_rm" x="132" y="13" class="t_name">
+ADMIN.SEGMENTACAO
+</text></a>
+<line x1="0" y1="17" x2="398" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_SEGMENTACAO
+</text>
+<text x="270" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_PROJETOS
+</text>
+<text x="270" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="5" y="56" class="t_name">
+F
+</text>
+<text x="26" y="56" class="c_name">
+ID_IMG_SEGMENTADAS
+</text>
+<text x="270" y="56" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="5" y="69" class="t_name">
+F
+</text>
+<text x="26" y="69" class="c_name">
+ID_SEMENTES
+</text>
+<text x="270" y="69" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="82" class="nnc">
+*
+</text>
+<text x="26" y="82" class="c_name">
+DATA_HORA_PROJETO
+</text>
+<text x="270" y="82" class="column_dt">
+VARCHAR2 (25)
+</text>
+<text x="18" y="95" class="nnc">
+*
+</text>
+<text x="26" y="95" class="c_name">
+COORDENADAS_SEMENTE_CENTRAL
+</text>
+<text x="270" y="95" class="column_dt">
+VARCHAR2 (15)
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+COORDENADAS_CALC_JANELA
+</text>
+<text x="270" y="108" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="18" y="121" class="nnc">
+*
+</text>
+<text x="26" y="121" class="c_name">
+TOTAL_PIXELS_JANELA
+</text>
+<text x="270" y="121" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="134" class="nnc">
+*
+</text>
+<text x="26" y="134" class="c_name">
+TOTAL_SEMENTES_CALCULADAS
+</text>
+<text x="270" y="134" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="147" class="nnc">
+*
+</text>
+<text x="26" y="147" class="c_name">
+ERRO_ESTATISTICO_CALCULADO
+</text>
+<text x="270" y="147" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="160" class="nnc">
+*
+</text>
+<text x="26" y="160" class="c_name">
+OPERACAO_PROJETO
+</text>
+<text x="270" y="160" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="18" y="173" class="nnc">
+*
+</text>
+<text x="26" y="173" class="c_name">
+DESVIO_PADRAO_PROJETO
+</text>
+<text x="270" y="173" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="186" class="nnc">
+*
+</text>
+<text x="26" y="186" class="c_name">
+LIMIAR_1_SEGMENTACAO
+</text>
+<text x="270" y="186" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="199" class="nnc">
+*
+</text>
+<text x="26" y="199" class="c_name">
+LIMIAR_2_SEGMENTACAO
+</text>
+<text x="270" y="199" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="212" class="nnc">
+*
+</text>
+<text x="26" y="212" class="c_name">
+FAIXA_LIMIARES
+</text>
+<text x="270" y="212" class="column_dt">
+VARCHAR2 (30)
+</text>
+<text x="18" y="225" class="nnc">
+*
+</text>
+<text x="26" y="225" class="c_name">
+VARIANCIA_SEGMENTACAO
+</text>
+<text x="270" y="225" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="238" class="nnc">
+*
+</text>
+<text x="26" y="238" class="c_name">
+COORD_JANELA_FINAL_OBJ_INTER
+</text>
+<text x="270" y="238" class="column_dt">
+VARCHAR2 (40)
+</text>
+<text x="18" y="251" class="nnc">
+*
+</text>
+<text x="26" y="251" class="c_name">
+SEMENTES_CALCULADAS_JANELA
+</text>
+<text x="270" y="251" class="column_dt">
+CLOB
+</text>
+<text x="18" y="264" class="nnc">
+*
+</text>
+<text x="26" y="264" class="c_name">
+RELATORIO_COLETA_AUT_SEMENTE
+</text>
+<text x="270" y="264" class="column_dt">
+CLOB
+</text>
+<text x="18" y="277" class="nnc">
+*
+</text>
+<text x="26" y="277" class="c_name">
+RELATORIO_DADOS_ESTATISTICOS
+</text>
+<text x="270" y="277" class="column_dt">
+CLOB
+</text>
+<line x1="0" y1="283" x2="398" y2="283" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="290" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="296" class="c_name">
+SEGMENTACAO_PRIMARY (ID_SEGMENTACAO)
+</text>
+<line x1="0" y1="302" x2="398" y2="302" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="309" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#5F474C78-3472113D78D8">
+<text x="16" y="315" class="c_name">
+FK_SEGMENT_IMG_SEGMENT (ID_IMG_SEGMENTADAS)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="322" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#01861397-54C0D0DF93AE">
+<text x="16" y="328" class="c_name">
+FK_SEGMENT_PROJ (ID_PROJETOS)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="335" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#B8D66909-0DE019C05EC0">
+<text x="16" y="341" class="c_name">
+FK_SEGMENT_SEMENT (ID_SEMENTES)
+</text></a>
+<line x1="0" y1="347" x2="398" y2="347" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="16" y="360" class="c_name">
+FK_SEGMENT_IMG_SEGMENT1_IDX (ID_IMG_SEGMENTADAS)
+</text>
+<text x="16" y="373" class="c_name">
+FK_SEGMENT_PROJETOS1_IDX (ID_PROJETOS)
+</text>
+<text x="16" y="386" class="c_name">
+FK_SEGMENT_SEMENTES1_IDX (ID_SEMENTES)
+</text>
+<text x="5" y="399" class="t_name">
+U
+</text>
+<text x="16" y="399" class="c_name">
+SEGMENTACAO_PRIMARY (ID_SEGMENTACAO)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath11_0)" transform="translate(92,1479)">
+<rect x="0" y="0" width="318" height="127"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath11_0)" transform="translate(92,1479)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="318" height="127" stroke-opacity="0.09803922"></rect><a xlink:href="#B8D66909-0DE019C05EC0">
+<text id="B8D66909-0DE019C05EC0__dg_rm" x="103" y="13" class="t_name">
+ADMIN.SEMENTES
+</text></a>
+<line x1="0" y1="17" x2="317" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_SEMENTES
+</text>
+<text x="214" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="26" y="43" class="c_name">
+DESCRICAO_COR_SEMENTE
+</text>
+<text x="214" y="43" class="column_dt">
+VARCHAR2 (100)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+COR_RGB_SEMENTE
+</text>
+<text x="214" y="56" class="column_dt">
+VARCHAR2 (45)
+</text>
+<text x="26" y="69" class="c_name">
+DADOS_SEMENTES
+</text>
+<text x="214" y="69" class="column_dt">
+LONG
+</text>
+<line x1="0" y1="75" x2="317" y2="75" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="82" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="88" class="c_name">
+SEMENTES_PK (ID_SEMENTES)
+</text>
+<line x1="0" y1="94" x2="317" y2="94" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="107" class="t_name">
+U
+</text>
+<text x="16" y="107" class="c_name">
+SEMENTES_PK (ID_SEMENTES)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath13_0)" transform="translate(58,309)">
+<rect x="0" y="0" width="316" height="127"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath13_0)" transform="translate(58,309)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="316" height="127" stroke-opacity="0.09803922"></rect><a xlink:href="#42A0F32F-4039BCB233D9">
+<text id="42A0F32F-4039BCB233D9__dg_rm" x="82" y="13" class="t_name">
+ADMIN.RECOMENDACOES
+</text></a>
+<line x1="0" y1="17" x2="315" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="26" y="30" class="c_name">
+RECOMENDACAO_FAVORAB_BAIXA
+</text>
+<text x="254" y="30" class="column_dt">
+CLOB
+</text>
+<text x="26" y="43" class="c_name">
+RECOMENDACAO_FAVORAB_MEDIA
+</text>
+<text x="254" y="43" class="column_dt">
+CLOB
+</text>
+<text x="26" y="56" class="c_name">
+RECOMENDACAO_FAVORAB_ALTA
+</text>
+<text x="254" y="56" class="column_dt">
+CLOB
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="5" y="69" class="pk_name">
+P
+</text>
+<text x="26" y="69" class="pk_name">
+ID_RECOMENDACAO
+</text>
+<text x="254" y="69" class="column_dt">
+NUMBER
+</text>
+<line x1="0" y1="75" x2="315" y2="75" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="82" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="88" class="c_name">
+RECOMENDACOES_PK (ID_RECOMENDACAO)
+</text>
+<line x1="0" y1="94" x2="315" y2="94" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="107" class="t_name">
+U
+</text>
+<text x="16" y="107" class="c_name">
+RECOMENDACOES_PK (ID_RECOMENDACAO)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath15_0)" transform="translate(5,1103)">
+<rect x="0" y="0" width="449" height="150"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath15_0)" transform="translate(5,1103)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="449" height="150" stroke-opacity="0.09803922"></rect><a xlink:href="#6448DB16-C6C25D391F34">
+<text id="6448DB16-C6C25D391F34__dg_rm" x="125" y="13" class="t_name">
+ADMIN.ROTULOS_SEGMENTADOS
+</text></a>
+<line x1="0" y1="17" x2="448" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_ROTULOS_SEGMENTADOS
+</text>
+<text x="222" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_SEGMENTACAO
+</text>
+<text x="222" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="56" class="c_name">
+IMG_ROTULO_SEGMENTADO
+</text>
+<text x="222" y="56" class="column_dt">
+BLOB
+</text>
+<text x="26" y="69" class="c_name">
+CLASSE_COR
+</text>
+<text x="222" y="69" class="column_dt">
+VARCHAR2 (30)
+</text>
+<line x1="0" y1="75" x2="448" y2="75" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="82" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="88" class="c_name">
+ROTULOS_SEGMENTADOS_PRIMARY (ID_ROTULOS_SEGMENTADOS)
+</text>
+<line x1="0" y1="94" x2="448" y2="94" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="101" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#3E24020A-AB025A6B7774">
+<text x="16" y="107" class="c_name">
+FK_ROT_SEGMENT_SEGMENTACAO (ID_SEGMENTACAO)
+</text></a>
+<line x1="0" y1="113" x2="448" y2="113" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="126" class="t_name">
+U
+</text>
+<text x="16" y="126" class="c_name">
+ROTULOS_SEGMENTADOS_PRIMARY (ID_ROTULOS_SEGMENTADOS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath6_0)" transform="translate(564,217)">
+<rect x="0" y="0" width="370" height="280"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath6_0)" transform="translate(564,217)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="370" height="280" stroke-opacity="0.09803922"></rect><a xlink:href="#7E75EDF2-CD5B2E3B865E">
+<text id="7E75EDF2-CD5B2E3B865E__dg_rm" x="97" y="13" class="t_name">
+ADMIN.DADOS_CLIMATICOS
+</text></a>
+<line x1="0" y1="17" x2="369" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_DADOS_CLIMATICOS
+</text>
+<text x="254" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_PROJETOS
+</text>
+<text x="254" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+LOCAL_ESTACAO_CLIMATICA
+</text>
+<text x="254" y="56" class="column_dt">
+VARCHAR2 (150)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="26" y="69" class="c_name">
+PERIODO_MEDICAO
+</text>
+<text x="254" y="69" class="column_dt">
+VARCHAR2 (40)
+</text>
+<text x="18" y="82" class="nnc">
+*
+</text>
+<text x="26" y="82" class="c_name">
+DATA_MEDICAO
+</text>
+<text x="254" y="82" class="column_dt">
+DATE
+</text>
+<text x="18" y="95" class="nnc">
+*
+</text>
+<text x="26" y="95" class="c_name">
+PRECIPITACAO
+</text>
+<text x="254" y="95" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+TEMPERATURA_MAX
+</text>
+<text x="254" y="108" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="121" class="nnc">
+*
+</text>
+<text x="26" y="121" class="c_name">
+TEMPERATURA_MIN
+</text>
+<text x="254" y="121" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="134" class="nnc">
+*
+</text>
+<text x="26" y="134" class="c_name">
+UMIDADE_RELATIVA
+</text>
+<text x="254" y="134" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="147" class="nnc">
+*
+</text>
+<text x="26" y="147" class="c_name">
+PONTO_ORVALHO
+</text>
+<text x="254" y="147" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="160" class="nnc">
+*
+</text>
+<text x="26" y="160" class="c_name">
+TEMPERATURA_MED_COMPENSADA
+</text>
+<text x="254" y="160" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="173" class="nnc">
+*
+</text>
+<text x="26" y="173" class="c_name">
+REGIAO_ESTACAO_CLIMATICA
+</text>
+<text x="254" y="173" class="column_dt">
+VARCHAR2 (150)
+</text>
+<text x="26" y="186" class="c_name">
+STATUS
+</text>
+<text x="254" y="186" class="column_dt">
+VARCHAR2 (20)
+</text>
+<line x1="0" y1="192" x2="369" y2="192" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="199" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="205" class="c_name">
+DADOS_CLIMATICOS_PRIMARY (ID_DADOS_CLIMATICOS)
+</text>
+<line x1="0" y1="211" x2="369" y2="211" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="218" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#01861397-54C0D0DF93AE">
+<text x="16" y="224" class="c_name">
+FK_DADOS_CLIMATICOS_PROJ (ID_PROJETOS)
+</text></a>
+<line x1="0" y1="230" x2="369" y2="230" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="243" class="t_name">
+U
+</text>
+<text x="16" y="243" class="c_name">
+DADOS_CLIMATICOS_PRIMARY (ID_DADOS_CLIMATICOS)
+</text>
+<text x="16" y="256" class="c_name">
+FK_DADOS_CLIMAT_PROJETO1_IDX (ID_PROJETOS)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath8_0)" transform="translate(1087,5)">
+<rect x="0" y="0" width="439" height="260"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath8_0)" transform="translate(1087,5)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="439" height="260" stroke-opacity="0.09803922"></rect><a xlink:href="#70022807-F755786ED5EC">
+<text id="70022807-F755786ED5EC__dg_rm" x="104" y="13" class="t_name">
+ADMIN.TAB_VERD_FAVORABILIDADE
+</text></a>
+<line x1="0" y1="17" x2="438" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="26" y="30" class="c_name">
+ID_TAB_VERD_FAVORAB
+</text>
+<text x="198" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="26" y="43" class="c_name">
+V1
+</text>
+<text x="198" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+V2
+</text>
+<text x="198" y="56" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="26" y="69" class="c_name">
+V3
+</text>
+<text x="198" y="69" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="82" class="nnc">
+*
+</text>
+<text x="26" y="82" class="c_name">
+V4
+</text>
+<text x="198" y="82" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="95" class="nnc">
+*
+</text>
+<text x="26" y="95" class="c_name">
+V5
+</text>
+<text x="198" y="95" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+V6
+</text>
+<text x="198" y="108" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="121" class="nnc">
+*
+</text>
+<text x="26" y="121" class="c_name">
+V7
+</text>
+<text x="198" y="121" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="134" class="nnc">
+*
+</text>
+<text x="26" y="134" class="c_name">
+S
+</text>
+<text x="198" y="134" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="147" class="nnc">
+*
+</text>
+<text x="26" y="147" class="c_name">
+P_V1
+</text>
+<text x="198" y="147" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="160" class="nnc">
+*
+</text>
+<text x="26" y="160" class="c_name">
+P_V2
+</text>
+<text x="198" y="160" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="173" class="nnc">
+*
+</text>
+<text x="26" y="173" class="c_name">
+P_V3
+</text>
+<text x="198" y="173" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="186" class="nnc">
+*
+</text>
+<text x="26" y="186" class="c_name">
+P_V4
+</text>
+<text x="198" y="186" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="199" class="nnc">
+*
+</text>
+<text x="26" y="199" class="c_name">
+P_V5
+</text>
+<text x="198" y="199" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="212" class="nnc">
+*
+</text>
+<text x="26" y="212" class="c_name">
+P_V6
+</text>
+<text x="198" y="212" class="column_dt">
+FLOAT (126)
+</text>
+<text x="18" y="225" class="nnc">
+*
+</text>
+<text x="26" y="225" class="c_name">
+P_V7
+</text>
+<text x="198" y="225" class="column_dt">
+FLOAT (126)
+</text>
+<line x1="0" y1="231" x2="438" y2="231" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="244" class="t_name">
+U
+</text>
+<text x="16" y="244" class="c_name">
+TABELA_VERDADE_FAVORABILIDADE_PK (ID_TAB_VERD_FAVORAB)
+</text>
+</g>
+<g fill="white" stroke="white" clip-path="url(#clipPath5_0)" transform="translate(1112,944)">
+<rect x="0" y="0" width="352" height="293"></rect>
+</g>
+<g fill="rgb(251,206,74)" fill-opacity="0.2" stroke="rgb(0,0,0)" clip-path="url(#clipPath5_0)" transform="translate(1112,944)" stroke-opacity="0.09803922">
+<rect x="0" y="0" width="352" height="293" stroke-opacity="0.09803922"></rect><a xlink:href="#426014AC-D7B47B6445F8">
+<text id="426014AC-D7B47B6445F8__dg_rm" x="96" y="13" class="t_name">
+ADMIN.CLASSIFICACOES
+</text></a>
+<line x1="0" y1="17" x2="351" y2="17" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="18" y="30" class="nnc">
+*
+</text>
+<text x="5" y="30" class="pk_name">
+P
+</text>
+<text x="26" y="30" class="pk_name">
+ID_CLASSIFICACAO
+</text>
+<text x="230" y="30" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="43" class="nnc">
+*
+</text>
+<text x="5" y="43" class="t_name">
+F
+</text>
+<text x="26" y="43" class="c_name">
+ID_PROJETOS
+</text>
+<text x="230" y="43" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="56" class="nnc">
+*
+</text>
+<text x="26" y="56" class="c_name">
+RESULTADO
+</text>
+<text x="230" y="56" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="69" class="nnc">
+*
+</text>
+<text x="5" y="69" class="t_name">
+F
+</text>
+<text x="26" y="69" class="c_name">
+ID_BANCO_IMAGENS
+</text>
+<text x="230" y="69" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="82" class="c_name">
+PORCENTAGEM_TREINO
+</text>
+<text x="230" y="82" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="26" y="95" class="c_name">
+PORCENTAGEM_TESTE
+</text>
+<text x="230" y="95" class="column_dt">
+NUMBER (*,0)
+</text>
+<text x="18" y="108" class="nnc">
+*
+</text>
+<text x="26" y="108" class="c_name">
+TIPO_CLASSIFICACAO
+</text>
+<text x="230" y="108" class="column_dt">
+VARCHAR2 (30)
+</text>
+<text x="26" y="121" class="c_name">
+RELATORIO_CLASSIFICACAO
+</text>
+<text x="230" y="121" class="column_dt">
+CLOB
+</text>
+<text x="26" y="134" class="c_name">
+MATRIZ_CONFUSAO
+</text>
+<text x="230" y="134" class="column_dt">
+BLOB
+</text>
+<text x="26" y="147" class="c_name">
+CURVA_ROC
+</text>
+<text x="230" y="147" class="column_dt">
+BLOB
+</text>
+<text x="26" y="160" class="c_name">
+TUPLAS_BINARIAS
+</text>
+<text x="230" y="160" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="173" class="c_name">
+TUPLAS_BINARIAS_LIMPAS
+</text>
+<text x="230" y="173" class="column_dt">
+NUMBER
+</text>
+<text x="26" y="186" class="c_name">
+PERC_TUPLAS_DUPL_ELIMIN
+</text>
+<text x="230" y="186" class="column_dt">
+FLOAT (126)
+</text>
+<line x1="0" y1="192" x2="351" y2="192" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#pk_sym" x="4" y="199" width="8" height="8" fill-opacity="1.0"></use>
+<text x="16" y="205" class="c_name">
+CLASSIFICACOES_PRIMARY (ID_CLASSIFICACAO)
+</text>
+<line x1="0" y1="211" x2="351" y2="211" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<use xlink:href="#fk_sym" x="4" y="218" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#8FF96D42-92B3E5FC6871">
+<text x="16" y="224" class="c_name">
+FK_CLASSIF_BANCO_IMAGENS (ID_BANCO_IMAGENS)
+</text></a>
+<use xlink:href="#fk_sym" x="4" y="231" width="8" height="8" fill-opacity="1.0"></use><a xlink:href="#01861397-54C0D0DF93AE">
+<text x="16" y="237" class="c_name">
+FK_CLASSIF_PROJ (ID_PROJETOS)
+</text></a>
+<line x1="0" y1="243" x2="351" y2="243" fill="none" stroke="rgb(0,0,0)" stroke-opacity="0.09803922"></line>
+<text x="5" y="256" class="t_name">
+U
+</text>
+<text x="16" y="256" class="c_name">
+CLASSIFICACOES_PRIMARY (ID_CLASSIFICACAO)
+</text>
+<text x="16" y="269" class="c_name">
+FK_CLASSIFICACAO_PROJETOS1_IDX (ID_PROJETOS)
+</text>
+</g>
+
+</svg>
+			</div>
+		</div>
+	
+</body></html>
