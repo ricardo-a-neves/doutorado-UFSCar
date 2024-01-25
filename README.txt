@@ -1,7 +1,7 @@
 
 #--------------------------------------------------------------------------------#
 #--------------------------------------------------------------------------------#
-# DOUTORADO EM CIÊNCIA DA COMPUTAÇÃO - PERÍODO: 2019 - 2024                      #
+#          DOUTORADO EM CIÊNCIA DA COMPUTAÇÃO - PERÍODO: 2019 - 2024             #
 # ÁREA DE CONCENTRAÇÃO: VISÃO COMPUTACIONAL (PROCESSAMENTO DE IMAGENS E SINAIS)  #
 # INSTITUIÇÕES: UNIVERSIDADE FEDERAL DE SÃO CARLOS - UFSCar                      #
 #               EMBRAPA INSTRUMENTAÇÃO - SÃO CARLOS                              #
