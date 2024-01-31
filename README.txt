@@ -7,7 +7,7 @@
 #               EMBRAPA INSTRUMENTAÇÃO - SÃO CARLOS                              #
 #               INSTITUTO FEDERAL DE SÃO PAULO - IFSP                            #         
 # DOUTORANDO: RICARDO ALEXANDRE NEVES                                            #
-# ORIENTADOR: DR.PAULO ESTEVÃO CRUVINEL                                          #
+# ORIENTADOR: PROF.DR.PAULO ESTEVÃO CRUVINEL                                     #
 #                                                                                #
 # -> TECNOLOGIAS: PYTHON 3, STREAMLIT (FRAMEWORK WEB), ORACLE DATABASE E         #
 #                 AMBIENTE ORACLE CLOUD                                          #
