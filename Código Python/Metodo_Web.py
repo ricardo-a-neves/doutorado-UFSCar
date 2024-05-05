@@ -46,6 +46,9 @@ import time
 # Ignorar os avisos de Warnings
 warnings.filterwarnings('ignore')
 
+# Verificar a versão do Pandas (Pré-requisito 1.3.1)
+#print("Versão do Pandas: %s" % pd.__version__)
+
 #------------------------------------------------------------------------------------------------
 # Configurações Globais:
 
@@ -82,10 +85,16 @@ if not os.path.exists(path_4):
     os.makedirs(path_4)
 
 # Definição dos Paths dos Relatórios do Data Warehouse (Cloud)
-relatorio_assunto_1='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_1.pdf'
-relatorio_assunto_2='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_2.pdf'
-relatorio_assunto_3='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_3.pdf'
-relatorio_qualidade_DW='/home/opc/dashboard/Relatorios_WEB/Relatorio_Qualidade_DW.pdf'
+#relatorio_assunto_1='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_1.pdf'
+#relatorio_assunto_2='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_2.pdf'
+#relatorio_assunto_3='/home/opc/dashboard/Relatorios_WEB/Relatorio_Assunto_3.pdf'
+#relatorio_qualidade_DW='/home/opc/dashboard/Relatorios_WEB/Relatorio_Qualidade_DW.pdf'
+
+# Definição dos Paths dos Relatórios do Data Warehouse (Local)
+relatorio_assunto_1='C:\\Users\\ratec\\OneDrive\\Documentos\\Códigos_Tese\\Relatorios_WEB\\Relatorio_Assunto_1.pdf'
+relatorio_assunto_2='C:\\Users\\ratec\\OneDrive\\Documentos\\Códigos_Tese\\Relatorios_WEB\\Relatorio_Assunto_2.pdf'
+relatorio_assunto_3='C:\\Users\\ratec\\OneDrive\\Documentos\\Códigos_Tese\\Relatorios_WEB\\Relatorio_Assunto_3.pdf'
+relatorio_qualidade_DW='C:\\Users\\ratec\\OneDrive\\Documentos\\Códigos_Tese\\Relatorios_WEB\\Relatorio_Qualidade_DW.pdf'
 
 #------------------------------------------------------------------------------------------------
 # Configurações de Página Dashboard
@@ -111,7 +120,7 @@ with tab3: # Aba "Relatório Técnico"
     dash_3_col_1_1, dash_3_col_1_2= st.columns([4.7,0.5], gap="medium")
 
     # Criar outras quatro colunas em seguida
-    dash_3_col_0_3, dash_3_col_1_3, dash_3_col_2_3, dash_3_col_3_3 = st.columns([0.9,1.6,1.6,1.4], gap="medium")
+    dash_3_col_0_3, dash_3_col_1_3, dash_3_col_2_3, dash_3_col_3_3 = st.columns([0.9,1.5,1.5,1.4], gap="medium")
 
 with tab6: # Aba "Qualidade de Dados"    
     # Criar as colunas iniciais
@@ -515,7 +524,7 @@ def calcularAjusteCurva(x,y,labels,descricao,tab, flag):
     # Dados de Entrada
     x = np.array(x)
     y = np.array(y)
-
+    
     # Ajuste da curva a um polinômio
     p1 = np.polyfit(x,y,1)
     p2 = np.polyfit(x,y,2)
@@ -527,40 +536,62 @@ def calcularAjusteCurva(x,y,labels,descricao,tab, flag):
     slope,intercept,r_value,p_value,std_err = stats.linregress(x,y)
 
     # Cálculo dos coeficientes de determinação dos polinômios de ordem 2 à 5
+
+    # Cálculo do (R-Quadrado)
+    #    Soma dos Quadrados dos Resíduos (SQresid): variação de Y que não é explicada pelo modelo elaborado. 
+    #     => É o somatório das diferenças entre o valor predito e o valor real elevados ao quadrado.
+
+    #    Soma dos Quadrados de Regressão (SQtotal): oferece a variação de Y considerando as variáveis X utilizadas no modelo.
+    #     
+    #    => Então, o R-quadrado é calculado dividindo (SQresid) pelo (SQtotal), sendo o resultado subtraído de 1.   
+    #   --------------------------------------
+
     yfit2 = p2[0] * pow(x,2) + p2[1] * x + p2[2]
     yresid2 = y - yfit2
     SQresid = sum(pow(yresid2,2))
     SQtotal = len(y) * np.var(y)
+    R2_2 = 0
     R2_2 = 1 - SQresid/SQtotal
 
     yfit3 = p3[0] * pow(x,3) + p3[1] * pow(x,2) + p3[2] * x + p3[3]
     yresid3 = y - yfit3
     SQresid = sum(pow(yresid3,2))
     SQtotal = len(y) * np.var(y)
-    R2_3 = 1 - SQresid/SQtotal
+    R2_3 = 0
+    R2_3 = 1 - SQresid/SQtotal    
 
     yfit4 = p4[0] * pow(x,4) + p4[1] * pow(x,3) + p4[2] * pow(x,2) + p4[3] * x + p4[4]
     yresid4 = y - yfit4 
     SQresid = sum(pow(yresid4,2))
     SQtotal = len(y) * np.var(y) 
+    R2_4 = 0
     R2_4 = 1 - SQresid/SQtotal
-
+   
     yfit5 = p5[0] * pow(x,5) + p5[1] * pow(x,4) + p5[2] * pow(x,3) + p5[3] * pow(x,2) + p5[4] * x + p5[5]
     yresid5 = y - yfit5
     SQresid = sum(pow(yresid5,2))
     SQtotal = len(y) * np.var(y)
-    R2_5 = 1 - SQresid/SQtotal
+    R2_5 = 0
+    R2_5 = 1 - SQresid/SQtotal       
 
     # Impressão dos Resultados
-    print('Equação da reta')
+    status_descricao=""
+    
+    if flag==0:
+        status_descricao = "Dados Sem Interpolação:"
+    else:
+        status_descricao = "Dados Com Interpolação:"
+
+    print("\n" + status_descricao + "\n")
+    print('Equação da reta: ' + str(descricao) )
     print('Coeficientes',p1,'R2 =',pow(r_value,2))
-    print('Polinômio de ordem 2')
+    print('Polinômio de ordem 2: ' + str(descricao))
     print('Coeficientes',p2,'R2 =',R2_2)
-    print('Polinômio de ordem 3')
+    print('Polinômio de ordem 3: ' + str(descricao))
     print('Coeficientes',p3,'R2 =',R2_3)
-    print('Polinômio de ordem 4')
+    print('Polinômio de ordem 4: ' + str(descricao))
     print('Coeficientes',p4,'R2 =',R2_4)
-    print('Polinômio de ordem 5')
+    print('Polinômio de ordem 5: ' + str(descricao))
     print('Coeficientes',p5,'R2 =',R2_5)
 
     # Interpolação
@@ -572,6 +603,20 @@ def calcularAjusteCurva(x,y,labels,descricao,tab, flag):
     new_p3=interpolate.interp1d(x,np.polyval(p3,x), kind='linear')(new_x)
     new_p4=interpolate.interp1d(x,np.polyval(p4,x), kind='linear')(new_x)
     new_p5=interpolate.interp1d(x,np.polyval(p5,x), kind='linear')(new_x)
+
+    # Ajustar y para ter o mesmo comprimento que new_y
+    y_adjusted = interpolate.interp1d(x, y, kind='linear')(new_x)
+
+    # Calcular o R quadrado da Spline Cúbica
+
+    SQresid = sum(pow(y_adjusted - new_y, 2))
+    SQtotal = sum(pow(y_adjusted - np.mean(y_adjusted), 2))
+    R2_Spline = 1 - SQresid/SQtotal
+
+    if flag==1: # Não imprimir o valor se "Sem interpolação"
+        print('R2 (B-Spline) ' + descricao + " =", R2_Spline)
+    
+    print('\n------------------------------------------\n')
     
     # Plotagem dos gráficos - Interpolação com Spline Cúbica
     
@@ -588,7 +633,7 @@ def calcularAjusteCurva(x,y,labels,descricao,tab, flag):
     plt.plot(x,np.polyval(p4,x), label = 'Grau 4',color ='k')
     plt.plot(x,np.polyval(p5,x), 'c', label = 'Grau 5')
     plt.title("Gráfico de Dados Sem Interpolação")
-    plt.xlabel("Dados Janela Temporal: "+str(descricao))
+    plt.xlabel("Dados Janela Temporal: " +str(descricao))
     plt.ylabel("Valores")
     plt.xticks(x, labels, rotation='vertical')
     plt.legend()
@@ -770,7 +815,7 @@ def regra01(df_consulta_bd,casas_decimais):
       medianaRegra_01=round(regra_1['umidadeRelativa'].median(),casas_decimais)
       # Mostrar o Resultado
       print("Mediana Regra 1:",medianaRegra_01)
-      print("Período Molhamento Foliar:", flag_regra_1)
+      print("Período Molhamento Foliar(favorabilidade):", flag_regra_1)
       print(regra_1)
 
   # Se consulta (Regra Alta) retorna vazio - Verificar (Regra Média)
@@ -781,7 +826,7 @@ def regra01(df_consulta_bd,casas_decimais):
           medianaRegra_01=round(regra_1['umidadeRelativa'].median(),casas_decimais)
           # Mostrar o Resultado
           print("Mediana Regra 1:",medianaRegra_01)
-          print("Período Molhamento Foliar:", flag_regra_1)
+          print("Período Molhamento Foliar(favorabilidade):", flag_regra_1)
           print(regra_1)
 
       # Se consulta (Regra Média) retorna vazio - Verificar (Regra Baixa)
@@ -792,7 +837,7 @@ def regra01(df_consulta_bd,casas_decimais):
             medianaRegra_01=round(regra_1['umidadeRelativa'].median(),casas_decimais)
             # Mostrar o Resultado
             print("Mediana Regra 1:",medianaRegra_01)
-            print("Período Molhamento Foliar:", flag_regra_1)
+            print("Período Molhamento Foliar (favorabilidade):", flag_regra_1)
             print(regra_1)
 
       ## Se consulta (Regra Baixa) retorna vazio      
@@ -801,8 +846,8 @@ def regra01(df_consulta_bd,casas_decimais):
           flag_regra_1='Baixa'
           # Mostrar o Resultado
           print("Mediana Regra 1:", medianaRegra_01)
-          print("Período Molhamento Foliar:",flag_regra_1)
-          print("Não há dados da REGRA_2 para serem visualizados!!")
+          print("Período Molhamento Foliar (favorabilidade):",flag_regra_1)
+          print("Não há dados da REGRA_1 para serem visualizados!!")
 
   return medianaRegra_01, regra_1, flag_regra_1
 
@@ -1518,7 +1563,7 @@ def plotarOcorrencias(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,o
    plt.plot(x,y,'k--')
    plt.plot(x,y,'go')
    plt.grid(True)
-   plt.title("Ocorrências x Variáveis Base de Favorabilidade")
+   plt.title("Ocorrências x Variáveis 'R'")
    #plt.xlabel("Variáveis da Base de Regras de Favorabilidade da FAS")
    plt.ylabel("Ocorrências")
    plt.xticks(x, labels, rotation='vertical')
@@ -1570,13 +1615,13 @@ def carregarTabelaVerdade():
 
 # Função para encontrar a Combinação da Tabela - Descobrir o Estado correspondente
 # Dado o vetor de Ocorrências de Favorabilidade da FAS
-def encontraCombinacao(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,ocorrenciasRegra_4,ocorrenciasRegra_5,ocorrenciasRegra_6,
+def encontraCombinacao(ocorrenciasRegra_1,flag_regra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,ocorrenciasRegra_4,ocorrenciasRegra_5,ocorrenciasRegra_6,
                     ocorrenciasRegra_7,df_tab_verdade,tab):
     vetor_compara=[]
     vetor_ocorrencias=[ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,ocorrenciasRegra_4,ocorrenciasRegra_5,ocorrenciasRegra_6,
                     ocorrenciasRegra_7]
     text=""
-    text+="\nEntradas para simulação Modelo Cadeias Ocultas de Markov"
+    text+="\nEntradas para o Modelo Cadeias Ocultas de Markov"
     text+="\nVetor de Ocorrências:" + str(vetor_ocorrencias)
 
     #**********************************************
@@ -1586,13 +1631,19 @@ def encontraCombinacao(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,
         dash_col_2_3.latex(r'''
         \textcolor{blue}{\textbf{Resultados do Processamento:}}
         ''')              
-        dash_col_2_3.write("\nVetor de Ocorrências:" + str(vetor_ocorrencias))
+        dash_col_2_3.write("\nVetor de Ocorrências:" + str(vetor_ocorrencias))      
 
     for ocorrencia in vetor_ocorrencias:
         if ocorrencia>0:
-            vetor_compara.append(1)
+            vetor_compara.append(1)        
         else:
             vetor_compara.append(0)
+
+    # # Compara a flag de favorabilidade da variável V1 com o resultado
+    # #   das ocorrências, apenas quando a flag for para "Baixa".
+    # if flag_regra_1 =='Baixa':
+    #     vetor_compara[0]=0
+
     text+="\nVetor de Comparação:" + str(vetor_compara)
 
     #*********************************************
@@ -1615,7 +1666,7 @@ def encontraCombinacao(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,
                                                 vetor_resultado.iloc[0,4],vetor_resultado.iloc[0,5],vetor_resultado.iloc[0,6]],                            \
                                             [vetor_resultado.iloc[0,8],vetor_resultado.iloc[0,9],vetor_resultado.iloc[0,10],vetor_resultado.iloc[0,11],    \
                                                 vetor_resultado.iloc[0,12],vetor_resultado.iloc[0,13],vetor_resultado.iloc[0,14]]],
-                                                columns=["V1", "V2", "V3", "V4", "V5", "V6", "V7"], index=['Combinação:','Porcentagem:'])
+                                                columns=["R1", "R2", "R3", "R4", "R5", "R6", "R7"], index=['Combinação:','Porcentagem:'])
             
     #*********************************************
     # Exibição do Vetor de Resultados - Dashboard
@@ -1625,9 +1676,9 @@ def encontraCombinacao(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,
         dash_col_2_3.text("Vetor de Resultado - Cadeias Ocultas Markov:")
         
         # Formatar os campos em duas casas decimais
-        dash_col_2_3.dataframe(df_vetor_resultado_linhas.style.format({'V1':'{:.2f}','V2':'{:.2f}','V3':'{:.2f}','V4':'{:.2f}','V5':'{:.2f}',\
-                                                             'V6':'{:.2f}','V7':'{:.2f}'}))      
-                                  
+        dash_col_2_3.dataframe(df_vetor_resultado_linhas.style.format({'R1':'{:.2f}','R2':'{:.2f}','R3':'{:.2f}','R4':'{:.2f}','R5':'{:.2f}',\
+                                                             'R6':'{:.2f}','R7':'{:.2f}'}))              
+                                 
     return vetor_resultado, vetor_compara, vetor_ocorrencias, text
 
 #------------------------------------------------------------------------------------------------
@@ -2060,7 +2111,7 @@ def exibir_dados_qualidade_dados(tab, df_consulta_qualidade, lista_consulta_qual
      #---------------------------------------
     
     # Dados dos Indicadores de Qualidade Fase Aprendizado de Máquinas (Classificação)
-    dados_ind_aprend_maquinas=[['% Instâncias Duplicadas Eliminadas','% Precisão, Acurácia, F1 Score,Revocação','VP, VN, FP, FN, Área sob a Curva']]
+    dados_ind_aprend_maquinas=[['% Instâncias Duplicadas Eliminadas','% Precisão, Acurácia, F1 Score, Revocação','VP, VN, FP, FN, Área sob a Curva']]
     
     # Inicializar Dataframe para exibição de Indicadores Fase Fase Aprendizado de Máquinas (Classificação)
     df_dados_dados_ind_aprend_maquinas=pd.DataFrame(dados_ind_aprend_maquinas, columns=['Instâncias Duplicadas','Relatório Classificador',\
@@ -2150,7 +2201,7 @@ def exibir_dados_qualidade_dados(tab, df_consulta_qualidade, lista_consulta_qual
             dash_6_col_2_1, dash_6_col_2_2, dash_6_col_2_3= st.columns([0.2,0.9,1.5], gap="medium")
 
             # Dados para Dimensionalidade
-            dados_dim=[['130','5']]
+            dados_dim=[['130','19']]
             
             # Inicializar Dataframe para exibição de Dados Estáticos (Dimensionalidade)
             #   => Estes dados são fixos para o trabalho e por esta razão não foram armazenados no Banco Oracle
@@ -2279,7 +2330,7 @@ def exibirRelatorios_DW(tab, arquivo_1, arquivo_2, arquivo_3):
     with open(arquivo_1,"rb") as f:
                 base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="900" height="460" type="application/pdf"></iframe>'
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="900" height="460" type="application/pdf"></iframe>'    
     requisitos_1.markdown(pdf_display, unsafe_allow_html=True)
 
     #****************************************************************************************************************
@@ -2524,7 +2575,7 @@ def processar(input_data_teste):
     #=======================================================================
 
     # Chamada de Função para encontrar a Combinação da Tabela - Descobrir o Estado correspondente    
-    vetor_resultado, vetor_compara, vetor_ocorrencias, text=encontraCombinacao(ocorrenciasRegra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,\
+    vetor_resultado, vetor_compara, vetor_ocorrencias, text=encontraCombinacao(ocorrenciasRegra_1,flag_regra_1,ocorrenciasRegra_2,ocorrenciasRegra_3,\
         ocorrenciasRegra_4,ocorrenciasRegra_5,ocorrenciasRegra_6,ocorrenciasRegra_7,df_tab_verdade, tab1)    
 
     #=======================================================================
